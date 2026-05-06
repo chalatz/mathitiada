@@ -1,0 +1,31 @@
+{
+  "name": "mathitiada",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --watch --postcss",
+    "dev:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss",
+    "deploy:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss --minify",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all dev:tw --parallel watch:*",
+    "deploy": "npm-run-all deploy:*",
+    "build": "npm-run-all build:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "tailwindcss -i assets/css/styles.css -o _site/assets/css/styles.css --watch --postcss",
+    "deploy:11ty": "eleventy",
+    "build:css": "tailwindcss -i assets/css/styles.css -o _site/assets/css/styles.css --postcss --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "markdown-it-attrs": "^4.3.1",
+    "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

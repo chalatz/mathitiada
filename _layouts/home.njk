@@ -4,9 +4,20 @@ layout: default.njk
 <div class="reveal">
     <div class="slides">
         {% for item in slides.items %}
-            <section>
-                <h2>{{ item.q }}</h2>
-                <p>{{ item.a }}</p>
+            <section class="card">
+                <h2 class="q">
+                    {{ item.q }}
+                </h2>
+                <div class="a">
+                    <div class="a__container">
+                        <div class="a__front">
+                            Απάντηση
+                        </div>
+                        <div class="a__back">
+                            {{ item.a }}
+                        </div>
+                    </div>
+                </div>
             </section>
         {% endfor %}
 

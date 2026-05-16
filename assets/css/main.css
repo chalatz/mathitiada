@@ -1,0 +1,60 @@
+:root {
+    --r-heading-color: #000;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    color: #000;
+}
+
+.q,
+.a {
+    color: #000;
+}
+
+.a {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.a__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background-color: green;
+}
+
+.a:hover .a__container {
+  transform: rotateY(180deg);
+}
+
+.a__front,
+.a__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+
+/* Style the front side (fallback if image is missing) */
+.a__front {
+  background-color: #bbb;
+}
+
+/* Style the back side */
+.a__back {
+  background-color: dodgerblue;
+  transform: rotateY(180deg);
+}

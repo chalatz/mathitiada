@@ -1,19 +1,5 @@
 :root {
-    --r-heading-color: #000;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    color: #000;
-}
-
-.q,
-.a {
-    color: #000;
+    --r-heading-text-transform: none;
 }
 
 .a {
@@ -57,4 +43,10 @@
 .a__back {
   background-color: dodgerblue;
   transform: rotateY(180deg);
+}
+
+.reveal .slide-image {
+    max-width: 50%;
+    object-fit: cover;
+    box-shadow: 0 0px 10px 0px #666;
 }

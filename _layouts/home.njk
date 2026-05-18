@@ -4,10 +4,15 @@ layout: default.njk
 <div class="reveal">
     <div class="slides">
         {% for item in slides.items %}
+            {% if item.image %}
+                
             <section class="card">
                 <h2 class="q">
                     {{ item.q }}
                 </h2>
+                {% if item.image %}
+                    <img src="{{ item.image | url }}" alt="Image" class="slide-image">
+                {% endif %}
                 <div class="a">
                     <div class="a__container">
                         <div class="a__front">
@@ -19,6 +24,7 @@ layout: default.njk
                     </div>
                 </div>
             </section>
+            {% endif %}
         {% endfor %}
 
     </div>

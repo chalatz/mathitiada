@@ -549,71 +549,85 @@ items:
     q: 'Η σημαία είναι......;'
     a: Αργεντινή
     level: 1
+    image: /assets/images/flags/ar.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Μαρόκο
     level: 1
+    image: /assets/images/flags/ma.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Κροατία
     level: 1
+    image: /assets/images/flags/hr.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Αίγυπτος
     level: 1
+    image: /assets/images/flags/eg.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Νιγηρία
     level: 2
+    image: /assets/images/flags/ng.png   
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Τζαμάικα
     level: 2
+    image: /assets/images/flags/jm.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Ουρουγουάη
     level: 2
+    image: /assets/images/flags/uy.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Ταιλάνδη
     level: 2
+    image: /assets/images/flags/th.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Μπουτάν
     level: 3
+    image: /assets/images/flags/bt.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Κένυα
     level: 3
+    image: /assets/images/flags/ke.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Λευκορωσία
     level: 3
+    image: /assets/images/flags/by.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Νησιά Μάρσαλ
     level: 3
+    image: /assets/images/flags/mh.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Καζακστάν
     level: 3
+    image: /assets/images/flags/kz.png
 -
     cat: Σημαίες
     q: 'Η σημαία είναι......;'
     a: Λεσότο
     level: 3
+    image: /assets/images/flags/ls.png
 -
     cat: ΜΟΥΣΙΚΗ
     q: 'Ποιος έγραψε το έργο "Storm" (μέρος του "Summer" από τις τέσσερις εποχές);'

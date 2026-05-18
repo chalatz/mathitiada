@@ -2,6 +2,7 @@
   "name": "mathitiada",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "watch:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --watch --postcss",
     "dev:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss",

@@ -1,11 +1,11 @@
 ---
 layout: default.njk
 ---
+{% set randomSlides = slides.items | randomLevelItems(1, 15) %}
+
 <div class="reveal">
     <div class="slides">
-        {% for item in slides.items %}
-            {% if item.image %}
-                
+        {% for item in randomSlides %}
             <section class="card">
                 <h2 class="q">
                     {{ item.q }}
@@ -13,6 +13,10 @@ layout: default.njk
                 {% if item.image %}
                     <img src="{{ item.image | url }}" alt="Image" class="slide-image">
                 {% endif %}
+                {% if item.audio %}
+                    <audio controls src="{{ item.audio | url }}"></audio>
+                {% endif %}
+
                 <div class="a">
                     <div class="a__container">
                         <div class="a__front">
@@ -24,7 +28,7 @@ layout: default.njk
                     </div>
                 </div>
             </section>
-            {% endif %}
+            
         {% endfor %}
 
     </div>

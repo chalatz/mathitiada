@@ -633,118 +633,130 @@ items:
     q: 'Ποιος έγραψε το έργο "Storm" (μέρος του "Summer" από τις τέσσερις εποχές);'
     a: Antonio Vivaldi
     level: 1
+    audio: /assets/audio/vivaldi.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος είναι ο τίτλος του τραγουδιού της Nina Simone;'
     a: Feeling Good
     level: 1
+    audio: /assets/audio/simone.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Από ποια περιοχή είναι το παραδοσιακό τραγούδι "Το μαργούδι";'
     a: Θράκη
     level: 1
+    audio: /assets/audio/margoudi.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος τραγουδάει το "The way you make me feel";'
     a: Michael Jackson
     level: 1
+    audio: /assets/audio/michael.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιανού συγκροτήματος είναι το έργο "Bohemian Rhapsody";'
     a: Queen
     level: 2
+    audio: /assets/audio/rhapsody.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Από ποια περιοχή είναι το παραδοσιακό τραγούδι "Πάρθεν η Ρωμανία";'
     a: Πόντος
     level: 2
+    audio: /assets/audio/romania.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος τραγουδάει το rap τραγούδι "Mockingbird";'
     a: Eminem
     level: 2
+    audio: /assets/audio/mockingbird.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Πως ονομάζεται το γνωστό τραγούδι των System Of A Down;'
     a: Toxicity
     level: 2
+    audio: /assets/audio/toxicity.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος συνθέτης έγραψε την άρια της Βασίλισσας της Νύχτας από την όπερα Μαγικός Αυλός;'
     a: Mozart
     level: 3
+    audio: /assets/audio/flute.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος τραγουδιστής λέει το "Fly me to the moon";'
     a: Frank Sinatra
     level: 3
+    audio: /assets/audio/moon.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος ραπ τραγουδιστής λέει το "Facts" από το άμπουμ "Φθηνά Tricks";'
     a: Bloody Hawk
     level: 3
+    audio: /assets/audio/hawk.mp3
 -
-    cat: 
+    cat: ΜΟΥΣΙΚΗ 
     q: 'Ποιος ροκ τραγουδιστής λέει το "Poison";'
     a: Alice Cooper
     level: 3
+    audio: /assets/audio/poison.mp3
 -
     cat: Πες το ελληνικά
     q: 'Πώς λέγεται στα ελληνικά η λέξη "ίντερνετ"'
     a: Διαδίκτυο
     level: 1
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "ρεστοράν"'
     a: Εστιατόριο
     level: 1
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "μπάσκετ"'
     a: Καλαθοσφαίριση
     level: 1
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "γκρουπ"'
     a: Ομάδα
     level: 1
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "ασανσέρ"'
     a: Ανελκυστήρας
     level: 2
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "σούπερ μάρκετ"'
     a: υπεραγορά
     level: 2
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "ραντεβού"'
     a: συνάντηση
     level: 2
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "μπούλινγκ"'
     a: εκφοβισμός
     level: 2
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "σκι"'
     a: χιονοδρομία
     level: 3
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "τατουάζ"'
     a: δερματοστιξία
     level: 3
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "ζαμπόν"'
     a: χοιρομέρι
     level: 3
 -
-    cat: 
+    cat: Πες το ελληνικά 
     q: 'Πώς λέγεται στα ελληνικά η λέξη "σκανάρω"'
     a: ψηφιοποιώ
     level: 3

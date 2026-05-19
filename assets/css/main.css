@@ -51,3 +51,20 @@
     object-fit: cover;
     box-shadow: 0 0px 10px 0px #666;
 }
+
+.level {
+  background-color: #282828;
+  color: #fff;
+  font-size: 1em;
+  padding: 0.2em 0.6em;
+  border-radius: 100%;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.level--1 {
+  background-color: #2ecc71;
+}
+.level--2 {
+  background-color: #3498db;
+}

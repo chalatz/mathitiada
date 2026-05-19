@@ -59,11 +59,90 @@
         // - https://revealjs.com/config/
         Reveal.initialize({
             hash: true,
+            slideNumber: true,
 
             // Learn about plugins: https://revealjs.com/plugins/
             // plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
         });
     </script>
+
+<script>
+  const START_TIME = 2 * 60; // 2 minutes
+
+  const timers = document.querySelectorAll(".timer");
+
+  const timerStates = new Map();
+
+  timers.forEach((timer) => {
+    timerStates.set(timer, {
+      timeLeft: START_TIME,
+      intervalId: null
+    });
+  });
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
+  }
+
+  function renderTimer(timer) {
+    const state = timerStates.get(timer);
+    timer.textContent = formatTime(state.timeLeft);
+  }
+
+  function startTimer(timer) {
+    const state = timerStates.get(timer);
+
+    if (state.intervalId !== null) return;
+
+    state.intervalId = setInterval(() => {
+      renderTimer(timer);
+
+      if (state.timeLeft <= 0) {
+        clearInterval(state.intervalId);
+        state.intervalId = null;
+        return;
+      }
+
+      state.timeLeft--;
+    }, 1000);
+  }
+
+  function resetTimer(timer) {
+    const state = timerStates.get(timer);
+
+    clearInterval(state.intervalId);
+    state.intervalId = null;
+    state.timeLeft = START_TIME;
+
+    renderTimer(timer);
+  }
+
+  timers.forEach(renderTimer);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const timer = entry.target;
+
+        if (entry.isIntersecting) {
+          startTimer(timer);
+        } else {
+          resetTimer(timer);
+        }
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+
+  timers.forEach((timer) => observer.observe(timer));
+</script>
+
+threshold: 0.5 means the timer starts w
     
 </body>
 </html>

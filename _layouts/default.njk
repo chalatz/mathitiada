@@ -21,16 +21,16 @@
     {% set the_remaining_one_pointers = one_pointers | slice(27, 37) %}
 
     {% set the_twelve_two_pointers = two_pointers | slice(0, 10) %}
-    {% set the_eight_two_pointers = two_pointers | slice(10, 17) %}
+    {% set the_eight_two_pointers = two_pointers | slice(10, 20) %}
     {% set the_four_two_pointers = two_pointers | slice(20, 27) %}
 
     {% set the_remaining_two_pointers = two_pointers | slice(27, 37) %}
 
     {% set the_twelve_three_pointers = three_pointers | slice(0, 5) %}
-    {% set the_eight_three_pointers = three_pointers | slice(5, 15) %}
-    {% set the_four_three_pointers = three_pointers | slice(15, 26) %}
+    {% set the_eight_three_pointers = three_pointers | slice(5, 12) %}
+    {% set the_four_three_pointers = three_pointers | slice(12, 23) %}
 
-    {% set the_remaining_three_pointers = three_pointers | slice(26, 36) %}
+    {% set the_remaining_three_pointers = three_pointers | slice(23, 33) %}
 
     {% set the_twelve_temp = the_twelve_one_pointers | concat(the_twelve_two_pointers) %}
     {% set the_twelve_final = the_twelve_temp | concat(the_twelve_three_pointers) %}

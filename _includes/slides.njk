@@ -1,6 +1,8 @@
 <div class="reveal">
     <div class="slides">
+        {% set counter = 0 %}
         {% for item in the_slides %}
+            {% set counter = counter + item.level %}
             <section class="card">
                 <h2 class="q">
                     {{ item.q }}
@@ -27,6 +29,8 @@
             </section>
             
         {% endfor %}
+
+        {# <p>{{ counter }}</p> #}
 
     </div>
 </div>

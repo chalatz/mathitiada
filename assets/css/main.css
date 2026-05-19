@@ -19,7 +19,11 @@
   transform-style: preserve-3d;
 }
 
-.a:hover .a__container {
+/* .a:hover .a__container {
+  transform: rotateY(180deg);
+} */
+
+.a.is-flipped .a__container {
   transform: rotateY(180deg);
 }
 
@@ -40,9 +44,12 @@
 
 /* Style the back side */
 .a__back {
-  background-color: #eee;
+  background-color: #2ecc71;
   transform: rotateY(180deg);
   border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reveal .slide-image {
@@ -66,4 +73,16 @@
 }
 .level--2 {
   background-color: #3498db;
+}
+
+a.home {
+  position: fixed;
+  top: 6px;
+  left: 6px;
+  z-index: 1000;
+}
+
+a.home svg {
+  width: 30px;
+  height: 30px;
 }

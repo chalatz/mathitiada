@@ -49,6 +49,10 @@
     {% endif %}
     {% include "slides.njk" %}
 
+    <a href="{{ '/' | url }}" class="home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#607d8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12H3l9-9 9 9h-2M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M10 12h4v4h-4z"/></svg>
+    </a>
+
     {{ content | safe }}
     
     <script src="{{ '/assets/js/reveal.js' | url }}"></script>
@@ -142,7 +146,13 @@
   timers.forEach((timer) => observer.observe(timer));
 </script>
 
-threshold: 0.5 means the timer starts w
+<script>
+    document.querySelectorAll('.a').forEach((card) => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped');
+        });
+    });
+</script>
     
 </body>
 </html>

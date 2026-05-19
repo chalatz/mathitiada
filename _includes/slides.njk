@@ -1,11 +1,6 @@
----
-layout: default.njk
----
-{% set randomSlides = slides.items | randomLevelItems(1, 15) %}
-
 <div class="reveal">
     <div class="slides">
-        {% for item in randomSlides %}
+        {% for item in the_slides %}
             <section class="card">
                 <h2 class="q">
                     {{ item.q }}

@@ -1,0 +1,33 @@
+{% set the_slides = slides.items %}
+
+{% set one_p = the_slides | pluck("level", 1) %}
+{% set two_p = the_slides | pluck("level", 2) %}
+{% set three_p = the_slides | pluck("level", 3) %}
+
+{% set one_pointers = one_p | randomize %}
+{% set two_pointers = two_p | randomize %}
+{% set three_pointers = three_p | randomize %}
+
+{% set the_twelve_one_pointers = one_pointers | slice(0, 15) %}
+{% set the_eight_one_pointers = one_pointers | slice(15, 24) %}
+{% set the_four_one_pointers = one_pointers | slice(24, 27) %}
+
+{% set the_twelve_two_pointers = two_pointers | slice(0, 10) %}
+{% set the_eight_two_pointers = two_pointers | slice(10, 17) %}
+{% set the_four_two_pointers = two_pointers | slice(20, 27) %}
+
+{% set the_twelve_three_pointers = three_pointers | slice(0, 5) %}
+{% set the_eight_three_pointers = three_pointers | slice(5, 15) %}
+{% set the_four_three_pointers = three_pointers | slice(15, 26) %}
+
+{% set the_twelve_temp = the_twelve_one_pointers | concat(the_twelve_two_pointers) %}
+{% set the_twelve_final = the_twelve_temp | concat(the_twelve_three_pointers) %}
+{% set the_twelve = the_twelve_final | randomize %}
+
+{% set the_eight_temp = the_eight_one_pointers | concat(the_eight_two_pointers) %}
+{% set the_eight_final = the_eight_temp | concat(the_eight_three_pointers) %}
+{% set the_eight = the_eight_final | randomize %}
+
+{% set the_four_temp = the_four_one_pointers | concat(the_four_two_pointers) %}
+{% set the_four_final = the_four_temp | concat(the_four_three_pointers) %}
+{% set the_four = the_four_final | randomize %}

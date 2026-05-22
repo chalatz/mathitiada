@@ -51,6 +51,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.a__back .level {
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .reveal .slide-image {
@@ -70,7 +76,7 @@
 }
 
 .level--1 {
-  background-color: #2ecc71;
+  background-color: #f39c12;
 }
 .level--2 {
   background-color: #3498db;

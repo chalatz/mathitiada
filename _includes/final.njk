@@ -1,0 +1,36 @@
+<div class="reveal">
+    <div class="slides">
+        {% set counter = 0 %}
+        {% for item in final.items %}
+            {% set counter = counter + item.level %}
+            <section class="card">
+                <h2 class="q">
+                    {{ item.q }}
+                </h2>
+                {% if item.image %}
+                    <img src="{{ item.image | url }}" alt="Image" class="slide-image">
+                {% endif %}
+                {% if item.audio %}
+                    <audio controls src="{{ item.audio | url }}"></audio>
+                {% endif %}
+
+                <div class="a">
+                    <div class="a__container">
+                        <div class="a__front">
+                            <div class="level level--{{ item.level }}">{{ item.level }}</div>
+
+                            <p class="timer">02:00</p>
+                        </div>
+                        <div class="a__back">
+                            {{ item.a }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        {% endfor %}
+
+        {# <p>{{ counter }}</p> #}
+
+    </div>
+</div>

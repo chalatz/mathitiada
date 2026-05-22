@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.njk" %}
+
+<body>
+
+    {% include "final.njk" %}
+
+    <a href="{{ '/' | url }}" class="home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#607d8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12H3l9-9 9 9h-2M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M10 12h4v4h-4z"/></svg>
+    </a>
+
+    {{ content | safe }}
+    
+    <script src="{{ '/assets/js/reveal.js' | url }}"></script>
+
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            // plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+    </script>
+
+<script>
+  const START_TIME = 2 * 60; // 2 minutes
+
+  const timers = document.querySelectorAll(".timer");
+
+  const timerStates = new Map();
+
+  timers.forEach((timer) => {
+    timerStates.set(timer, {
+      timeLeft: START_TIME,
+      intervalId: null
+    });
+  });
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
+  }
+
+  function renderTimer(timer) {
+    const state = timerStates.get(timer);
+    timer.textContent = formatTime(state.timeLeft);
+  }
+
+  function startTimer(timer) {
+    const state = timerStates.get(timer);
+
+    if (state.intervalId !== null) return;
+
+    state.intervalId = setInterval(() => {
+      renderTimer(timer);
+
+      if (state.timeLeft <= 0) {
+        clearInterval(state.intervalId);
+        state.intervalId = null;
+        return;
+      }
+
+      state.timeLeft--;
+    }, 1000);
+  }
+
+  function resetTimer(timer) {
+    const state = timerStates.get(timer);
+
+    clearInterval(state.intervalId);
+    state.intervalId = null;
+    state.timeLeft = START_TIME;
+
+    renderTimer(timer);
+  }
+
+  timers.forEach(renderTimer);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const timer = entry.target;
+
+        if (entry.isIntersecting) {
+          startTimer(timer);
+        } else {
+          resetTimer(timer);
+        }
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+
+  timers.forEach((timer) => observer.observe(timer));
+</script>
+
+<script>
+    document.querySelectorAll('.a').forEach((card) => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped');
+        });
+    });
+</script>
+    
+</body>
+</html>

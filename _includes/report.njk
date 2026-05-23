@@ -1,0 +1,28 @@
+<style>
+    * {
+        font-family: serif;
+    }
+    li {
+        margin-bottom: 0.5em;
+        font-size: 1.2em;
+        lheight: 1.4em;
+    }
+</style>
+
+<h2>Τελικός</h2>
+
+<ol>
+    {% for item in final.items %}
+        <li>{{ item.q }} -- <strong>{{ item.a }}</strong></li>
+    {% endfor %}
+</ol>
+
+<hr>
+
+<h2>Knockout</h2>
+
+<ol>
+    {% for item in bonus.items %}
+        <li>{{ item.q }} -- <strong>{{ item.a }}</strong></li>
+    {% endfor %}
+</ol>

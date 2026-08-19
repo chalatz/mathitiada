@@ -19,3 +19,13 @@ collections:
               name: "meta_title",
               widget: "string"
             }
+          - {
+              label: "Page Title",
+              name: "title",
+              widget: "string"
+            }
+          - {
+              label: "Heading",
+              name: "heading",
+              widget: "string"
+            }

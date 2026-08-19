@@ -15,7 +15,7 @@ collections:
         file: "index.md"
         fields:
           - {
-              label: "Title",
-              name: "title",
+              label: "Meta Title",
+              name: "meta_title",
               widget: "string"
             }

@@ -1,4 +1,4 @@
 ---
 layout: home.njk
-title: Μαθητιάδα 2026
+meta_title: Μαθητιάδα 2026!!
 ---

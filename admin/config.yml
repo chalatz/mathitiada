@@ -1,0 +1,21 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+  
+media_folder: "assets/images"
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home page"
+        name: "home"
+        file: "index.md"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string"
+            }

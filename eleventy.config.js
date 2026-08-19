@@ -40,6 +40,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./assets/fonts/**/*");
   eleventyConfig.addPassthroughCopy("./admin/assets/**/*.js");
   eleventyConfig.addPassthroughCopy("./admin/assets/**/*.css");
+  eleventyConfig.addPassthroughCopy("./admin/config.yml");
   eleventyConfig.addPassthroughCopy("./*.png");
   eleventyConfig.addPassthroughCopy("./favicon.ico");
   eleventyConfig.addPassthroughCopy(".site.webmanifest");
